@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <script>
+
+        function check() {
+
+            var a = document.getElementById("i0").value;
+            var b = document.getElementById("i1").value;
+
+           if(a==b) {
+               document.getElementById("result").textContent=alert("同じです")
+           } else {
+               document.getElementById("result").textContent=alert("はずれです")
+           }
+
+        }
+
+        
+
+    </script>
+
+    <title>神経衰弱</title>
+</head>
+
+<body>
+
+    <title>神経衰弱</title>
+
+    カード１<input id="i0"><br>
+    カード２<input id="i1"><br>
+
+    <button onclick="check()">check</button>
+    <p id="result"></p>
+
+</body>
+
+</html>
