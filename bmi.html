@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calcBMI() {
+
+            const higth = document.getElementById("i0").value;
+            const wigth = document.getElementById("i1").value;
+
+            const bmi = wigth / (higth * higth);
+
+            if (bmi < 18.5) {
+                document.getElementById("result").textContent = alert("やせすぎです。");
+            } else if (bmi >= 25) {
+                document.getElementById("result").textContent = alert("太りすぎです。");
+            } else {
+                document.getElementById("result").textContent = alert("普通です");
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h2>BMI計算</h2>
+
+    身長（ｍ）:<input id="i0"><br>
+    体重（ｋｇ）：<input id="i1">
+    <br>
+    <button onclick="calcBMI()">BMI計算</button>
+    <p id="result"></p>
+
+</body>
+
+</html>
