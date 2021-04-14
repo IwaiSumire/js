@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        var  startTime;
+
+        function start() {
+            starTime = new Date();
+        }
+
+        function stop() {
+            var now = new Date();
+            var result = now.getTime() - starTime.getTime();
+            document.getElementById("result").textContent = result;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>時間経過計算</h2>
+
+    <button onclick="start()">スタート</button><span id="stp"></span>
+    <button onclick="stop()">ストップ</button>
+
+    <h3>結果<span id="result"></span>です</h3>
+
+</body>
+
+</html>

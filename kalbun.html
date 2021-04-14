@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回文表示</title>
+
+    <script>
+        function kalbun() {
+            var source = document.getElementById("source").value;
+            var j = source.length;
+            var tasu = "";
+
+            for(var i = j-1; i >= 0; i--) {
+
+                tasu = tasu + source.charAt(i);
+            }
+
+            document.getElementById("result").textContent=tasu;
+        }
+    </script>
+
+</head>
+<body>
+
+    <input id="source">
+    <button onclick="kalbun()">逆にする</button>
+    
+    <h3>反対から読むと<span id="result"></span>です</h3>
+
+</body>
+</html>

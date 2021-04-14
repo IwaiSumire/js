@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <script>
+
+function Pen(color,length) {//object
+    this.color = color;
+    this.length = length;
+    this.draw = function () {
+        this.length -= 1;
+    }
+}
+
+//インスタンス化
+var penR = new Pen("red",10);
+var penB = new Pen("Blue",13);
+var penG = new Pen("green",9);
+//var pen = penR;
+
+        // var pen = {
+        //     color:"red",
+        //     length:5,
+        //     draw:function() {
+        //         this.length -=0.01;
+        //     }
+            
+        // }
+
+        function stroke() {//メソッド
+            pen.draw();
+
+            var pencii = document.getElementById("pencii");
+            pencii.style.width = pen.length + "cm;"
+
+            pencii.style.backgroundColor=pen.color;
+            pencii.textContent = "色＝" + pen.color + "長さ：" + pen.length;
+        }
+
+        //  function checkLength () {
+        //      document.getElementById("length").textContent = pen.length;
+        //  }
+
+        function pickR() {
+            pen=penR;
+            document.getElementById("pencii").textContent = "長さ：" +pen.length;
+        }
+        function pickG() {
+            pen=penG;
+        }
+        function pickB() {
+            pen=penB;
+        }
+
+    </script>
+</head>
+<body>
+
+    <button onclick="pickB()">青</button>
+    <button onclick="pickG()">緑</button>
+    <button onclick="pickR()">赤</button>
+
+    <button onclick="stroke()">書く</button>
+
+    <p id="pencii" style="background-color:red;width:5cm">  </p>
+    
+</body>
+</html>
