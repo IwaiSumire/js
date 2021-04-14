@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摂氏</title>
+
+    <script>
+        function c2f(c) {
+            var cc = (c *1.8)+32;
+            
+            return Math.floor(cc);
+        }
+        function convert() {
+            var c = document.getElementById("celsius").value;
+            var f = c2f(c);
+            var s = "摂氏：" + c + "度 華氏：" + f+"度";
+            document.getElementById("result").textContent=s;
+
+        }
+    </script>
+
+</head>
+<body>
+    <input id="celsius" type="range" min="0" max="100" onchange="convert()">
+    <p id="result"></p>
+</body>
+</html>

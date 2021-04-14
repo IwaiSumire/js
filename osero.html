@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #board {
+            background-color: black;
+        }
+        td.cell {
+            background-color: green;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+
+    <script>
+
+        var count =0;
+
+        function init() {
+            var b = document.getElementById("board");//tableの要素
+            
+            for(var i=0;i<8;i++) {//列追加
+                var tr = document.createElement("tr");//tr要素作る
+            
+
+            for(var j=0;j<8;j++) {//一行の要素追加
+                var td = document.createElement("td");//td要素作る
+                td.className="cell";
+                td.id="cell" +i+j;
+                td.onclick = clicked;
+                tr.appendChild(td);
+            }
+            b.appendChild(tr);//作った行をテーブルに挿入
+        }
+    }
+
+    function clicked(e) {
+
+        
+
+        if (count++ % 2 == 0) {
+                    e.target.textContent = "○";
+                    
+                } else {
+                    e.target.textContent="●";
+                }
+            }
+    </script>
+    
+</head>
+
+<body onload="init()">
+    <table id="board"></table>
+    <h2 id="info"></h2>
+</body>
+
+</html>

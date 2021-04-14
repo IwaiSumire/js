@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function calc() {
+            const year = document.getElementById("year").value;
+            const eto = year%12;
+
+            document.getElementById("y").textContent=year;
+
+            switch (eto) {
+                
+                    case 0:
+                    document.getElementById("eto").textContent="申"
+                    break;
+                    case 1:
+                    document.getElementById("eto").textContent="酉"
+                    break;
+                    case 2:
+                    document.getElementById("eto").textContent="戌"
+                    break;
+                    case 3:
+                    document.getElementById("eto").textContent="亥"
+                    break;
+                    case 4:
+                    document.getElementById("eto").textContent="子"
+                    break;
+                    case 5:
+                    document.getElementById("eto").textContent="丑"
+                    break;
+                    case 6:
+                    document.getElementById("eto").textContent="虎"
+                    break;
+                    case 7:
+                    document.getElementById("eto").textContent="兎"
+                    break;
+                    case 8:
+                    document.getElementById("eto").textContent="辰"
+                    break;
+                    case 9:
+                    document.getElementById("eto").textContent="巳"
+                    break;
+                    case 10:
+                    document.getElementById("eto").textContent="午"
+                    break;
+                    case 11:
+                    document.getElementById("eto").textContent="未"
+                    break;
+            }
+        }
+    </script>
+    <title>干支</title>
+</head>
+<body>
+
+    <h2><span id="y"></span> 年の干支は<span id="eto"></span></h2>
+    <p>
+
+        <input id="year">
+        <button onclick="calc()">計算</button>
+
+    </p>
+    
+</body>
+</html>

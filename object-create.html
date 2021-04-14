@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pen</title>
+
+    <script>
+        var colors=["red","blue","green","yellow","purple"];
+        var index=0;
+        
+        function insert() {
+
+            var parent = document.getElementById("mylist");//mylistを
+                var item = document.createElement("li");//liの要素を作る
+                item.textContent = colors[index];//liにテキストを入れる
+                item.style.color = colors[index];//liに色を付ける
+                index = ++index % colors.length;
+                //console.log(index);
+                parent.appendChild(item);親に子を追加
+        }
+
+    </script>
+</head>
+<body>
+
+    <button onclick="insert()">挿入</button>
+    <ol id="mylist">
+      
+    </ol>
+
+</body>
+</html>

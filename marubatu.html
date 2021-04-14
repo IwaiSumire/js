@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>●×クイズ</title>
+
+    <style>
+        td.cell {
+            width:100px;height:100px;
+            font-size:60pt; text-align: center;
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script>
+        var count =0;
+        function into () {
+
+            var table = document.getElementById("board");
+
+            for(var i=0;i<8;i++) {
+
+                var tr = document.createElement("tr");
+
+                for(var j=0;j<8;j++) {
+
+                    var td = document.createElement("td");
+                    td.className = "cell";
+                    td.onclick = clicked;
+                    td.id = "cell" + i + j;
+                    tr.appendChild(td);
+                }
+
+                table.appendChild(tr);
+            }
+
+            function clicked (e) {
+
+                if (count++ % 2 == 0) {
+                    e.target.textContent = "〇";
+                } else {
+                    e.target.textContent="●";
+                }
+
+            }
+
+
+        }
+
+      
+        
+        
+    </script>
+
+</head>
+<body onload="into()">
+
+    <table id="board" border="1"></table>
+
+</body>
+</html>
