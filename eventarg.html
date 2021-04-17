@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var nodes = document.getElementsByClassName("target");
+
+            for (var i = 0; i < nodes.length; i++) {
+                nodes[i].onclick = myhander;
+                nodes[i].onmousedown = myhander;
+                nodes[i].onmouseup = myhander;
+                nodes[i].onchange = myhander;
+                nodes[i].onfocus = myhander;
+            }
+        }
+
+            function myhander(e) {
+                console.log(e.type + "tagName=" + e.screenX + "pageX=" + e.pageX);
+                console.log("ckienX=" + e.clienX + "screenX=" + e.screenX +"pageX=" + e.pageX);
+            
+
+        }
+    </script>
+</head>
+
+<body>
+    <button class="target">ボタン</button>
+    <input class="target" type="range">
+    <p class="target">パラグラフ</p>
+    <h3>コンソール出力を見る</h3>
+</body>
+
+</html>
