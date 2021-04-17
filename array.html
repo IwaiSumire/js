@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var data = [1, 8, 4, 6, 8, 9, 23, 7, 45];//素データ
+
+        function push() {
+            var random = Math.floor(Math.random() * 10);//ランダムな1~10の整数を追加
+            var r = data.push(random);//更新した配列r
+            update(r);
+        }
+
+        function pop() {
+            var r = data.pop();
+            update(r);
+        }
+
+        function shift() {
+            var r = data.shift();
+            update(r);
+        }
+
+        function splict() {
+            var r = data.splict(3, 2);
+            update(r);
+        }
+
+        function update(r) {
+            document.getElementById("data").textContent = data;
+            document.getElementById("length").textContent = data.length;
+            document.getElementById("rval").textContent = r;
+
+            var v0 = data.indexOf(7);
+            var v1 = data.lastIndexOf(7);
+
+            document.getElementById("i0").textContent = v0;
+            document.getElementById("i1").textContent = v1;
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="push()">先頭に追加</button>
+    <button onclick="pop()">最後を消す</button>
+    <button onclick="shift()">先頭を消す</button>
+    <button onclick="splict()">3番目から2個を消す</button>
+
+
+    <ul>
+        <li>配列のデータ：<span id="data"></span></li>
+        <li>lengthプロパティ<span id="length"></span>
+        <li>戻り値：<span id="rval"></span></li>
+        <li>7が入っている位置を前から数える:<span id="i0"></span></li>
+        <li>7が入っている位置を後ろから数える:<span id="i1"></span></li>
+
+        </li>
+    </ul>
+
+</body>
+
+</html>
