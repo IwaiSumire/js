@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var data = [2, 5, 4, 7, 1, 6];
+
+        // var total = 0;
+
+        // data.forEach(function (v) {
+        //     console.log(v);
+        //     total +=v;
+        // })
+
+        // //forEachは配列の中を1つずつ取り出すメソッド
+
+        // var adder = function(v) {
+        //     total +=v;
+        // }
+
+        // data.forEach(adder);
+
+
+
+        data.forEach(function (v, i) {
+            // delete data[3];
+            console.log("[" + i + "]=" + v);
+        })
+
+        //配列の全てがテストに合格するか
+        var r0 = data.every(function (e) {
+            return e < 6
+        });
+
+        var r2 = data.every(function (e) {
+            return e > 6;
+        })
+
+        console.log(r0);
+        console.log(r2);
+
+        var data2 = [2, 5, 4, 7, 1, 6];
+
+        var r0 = data.filter(function (e) {
+            return e % 2 == 0;
+        })
+
+        console.log(r0);
+
+        //sort
+
+        var data3 = [1, 8, 0, 6, 3, 4, 9, 2];
+        data3.sort(function (a, b) {
+            return a - b;
+        })
+
+        data3.sort(mysort);
+        console.log(data3);
+
+
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
