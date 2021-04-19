@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let user = [];
+        let myDisplay = [];
+        let count = 0;
+        let allDisplay = "";
+
+        for (var i = 0; i < 9999; i++) {
+
+            judge = prompt("yを入力してください。それ以外は終了します");
+
+            if (judge == "y") {
+
+                count = count + 1;
+
+                user[i] = prompt("名前を入れてください");
+                const v = prompt("体重をいれて");
+                const h = prompt("身長を入れて") / 100;
+
+                myDisplay[i] = user[i] + "さんは" + bmical(v, h);
+
+                alert(myDisplay[i]);
+
+            } else {
+                i = 9999;
+            }
+        }
+
+        if (count != 0) {
+            for (var x = 0; x < count; x++) {
+                allDisplay = allDisplay + myDisplay[x] + "\n";
+            }
+
+            alert(allDisplay);
+        }
+        alert("終了します");
+
+        function bmical(v, h) {
+
+            const bmi = v / (h * h);
+
+            if (bmi > 25) {
+                message = "肥満";
+            } else if (bmi < 18.5) {
+                message = "やせ";
+            } else {
+                message = "普通";
+            }
+
+            return message;
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

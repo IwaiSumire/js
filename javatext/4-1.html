@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        const d = new Date();
+        // var week = d.getDay();
+
+        // document.writeln(week);
+
+        // switch (week) {
+        //     case 6:
+        //     case 7:
+        //         document.writeln("お休みです");
+        //         break;
+        //     default:
+        //         document.writeln("会社に行きましょう");
+
+        // }
+
+        const h = d.getHours();
+
+        if (h >= 9 && h < 17) {
+            document.writeln("営業中です")
+        } else {
+            document.writeln("閉店ガラガラ")
+        }
+
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
