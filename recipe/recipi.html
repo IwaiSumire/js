@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.onload = function () {
+            //読み込んだらやりたい処理
+            console.log('setNumの中身'+setNum);
+            //onchange 変更があったときに発動する
+            document.getElementById("setNum").onchange = setNum;
+        }
+
+
+        
+        function setNum(e) {
+
+           console.log('eの中身'+e);
+
+            const num = parseInt(e.target.value);
+            const v0 = num;
+            const v1 = num * 0.5;
+            const v2 = num * 100;
+
+            document.getElementById("i0").textContent = v0;
+            document.getElementById("i1").textContent = v1;
+            document.getElementById("i2").textContent = v2;
+            document.getElementById("num").textContent = num;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>ジャーマンポテトrecipe</h2>
+
+    <p>
+        <input id="setNum" type="range" min="1" max="5" value="1" />
+        <span id="num">1</span>人前
+    </p>
+
+    <table>
+        <tr>
+            <td rowspan="2">
+                <img src="germanpotate.jpg" alt="">
+            </td>
+
+            <td>
+                <h3>材料</h3>
+
+                <ul>
+                    <li>じゃがいも<span id="i0">1</span>個</li>
+                    <li>玉ねぎ<span id="i1">0.5</span>個</li>
+                    <li>ベーコン<span id="i2">100</span>g</li>
+                    <li>パセリ 少々</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>作り方</h3>
+                <ul>
+                    <li>じゃがいもと玉ねぎを薄切りにします</li>
+                    <li>ベーコン、ジャガイモ、玉ねぎの順で炒めます</li>
+                    <li>盛り付けてパセリを振りかけて出来上がり</li>
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
