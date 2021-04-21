@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ctx;
+
+        function init() {
+
+            const canvas = document.getElementById("canvas");
+
+            
+
+            ctx = canvas.getContext('2d');
+
+            //線の色
+            ctx.strokeStyle = "#ff0000";
+
+            ctx.beginPath();
+
+            
+            //線でできた形
+            ctx.strokeRect(10,10,80,80);
+
+            //塗りつぶしの色
+            ctx.fillStyle = "#00ff00"
+            //塗りつぶしの形
+            ctx.fillRect(110,10,80,80);
+
+            ctx.fillRect(210,10,80,80);
+            ctx.clearRect(230,30,40,40);
+
+
+            //ctx.beginPath();
+
+
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+
+    <canvas id="canvas" width="500px" height="100px"></canvas>
+
+</body>
+
+</html>

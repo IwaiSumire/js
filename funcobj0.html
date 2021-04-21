@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Person(name, energy) {//Personコンストラクタ
+            this.name = name;
+            this.energy = energy;
+            this.run = function() {
+                this.energy-=10;
+                console.log(this.energy);
+            }
+            this.sayHello = function() {
+                console.log("やっほー")
+            }
+        }
+
+        var p = new Person("Tanaka",100);//オブジェクト生成
+        p.run();
+        p.sayHello();
+
+
+        function add(a, b) {
+            return a + b;//a + bというメソッドを返す
+        }
+
+        function mul(a, b) {
+            return a * b;
+        }
+
+        //a/bをそのままcalcLatorに入れたvar
+        var calcLator = function (a, b) {
+            return a / b;
+        }
+        //xに3/2=5を代入する
+        var z = calcLator(3, 2);
+
+
+        var calcLator = function (a, b) {
+            return a - b;
+        }
+
+        var i = calcLator(3, 2)
+
+
+        //a + b をcalcLatorに代入する
+        var calcLator = add;
+        //xに2+3=5を代入する
+        var x = calcLator(2, 3);
+
+        calcLator = mul;
+        var y = calcLator(2, 3);
+
+
+        console.log(x);//5
+        console.log(y);//6
+        console.log(z);//1.5
+        console.log(i);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

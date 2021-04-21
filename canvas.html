@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let ctx;
+
+        function init() {
+            const canvas = document.getElementById("canvas");
+
+            //getcontex:キャンパスに描画するコンテキストを取得
+            ctx = canvas.getContext("2d");//いつも2d
+
+
+            ctx.strokeStyle = "#FF0000";//線の色
+
+            ctx.fillStyle = "#00FF00";//塗りつぶしの色
+            ctx.lineWidth = 10;//線の幅
+            ctx.lineCap = "round";//線の終端style
+            ctx.shadowColor = "#000000";//影の色
+            ctx.shadowBlur = "20";//ぼかし
+
+            ctx.beginPath();
+            ctx.moveTo(100, 100);
+            ctx.lineTo(180, 250);
+
+            //ただの線 strokeは線だけ
+            ctx.stroke();
+            
+            // 矩形を塗潰す 緑四角
+            ctx.fillRect(300, 100, 100, 150);
+
+            //fillrectは塗りつぶし
+            ctx.fillRect(700, 100, 500, 50);
+
+            // 矩形を描く 赤四角
+            ctx.strokeRect(500, 100, 100, 150);
+            //strokereckは線形
+        }
+
+
+    </script>
+</head>
+
+<body onload="init()">
+
+    <!-- htmlでcanvasを定義 -->
+    <canvas id="canvas" width="1500" height="400"></canvas>
+
+    <canvas id="canvas2" width="1500" height="400"></canvas>
+
+</body>
+
+</html>

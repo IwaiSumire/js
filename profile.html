@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        window.onload = function () {
+
+            alert("自己紹介をするよ！");
+
+            const answer = document.getElementsByClassName("an");
+
+            //console.log(answer);
+
+
+            for (var i = 0; i < answer.length; i++) {
+
+                const nowAns = answer[i];
+
+                //nowAnsは保存用 答えが入っている
+                nowAns.text = nowAns.textContent;
+
+                nowAns.textContent = "ここをクリック";
+
+                nowAns.onclick = function (e) {//eはnowAnsが入っている
+                    e.target.textContent = e.target.text;
+                }
+
+
+            }
+
+        }
+
+        function hov() {
+
+            const h = document.getElementsByClassName("ho");
+
+            for (var i = 0; i < h.length; i++) {
+
+                const newHo = h[i];
+
+                newHo.textContent = "クリックしてね";
+
+            }
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <h2>ラーメン好き</h2>
+    <table border="3">
+        <tr>
+            <td>質問</td>
+            <td>答え</td>
+        </tr>
+        <tr>
+            <td>名前</td>
+            <td> <span class="an" onmouseover="hov()">すみちゃん</span><span class="ho"></span></td>
+        </tr>
+        <tr>
+            <td>好きな食べ物</td>
+            <td> <span class="an" onmouseover="hov()">ラーメン・お寿司・グミ</span> <span class="ho"></span></td>
+        </tr>
+        <tr>
+            <td>趣味</td>
+            <td> <span class="an" onmouseover="hov()">漫画・読書</span><span class="ho"></span> </td>
+        </tr>
+        <tr>
+            <td>特技</td>
+            <td> <span class="an" onmouseover="hov()">節約</span><span class="ho"></span></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

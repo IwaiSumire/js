@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テスト</title>
+
+    <script>
+
+        var data = [1,2,3,4,5,6,7,8,9];
+        var str = "HelloSumire";
+
+        var str1 = new String("world");
+        var str2 = new String("Hello");
+
+        var a = Object.getPrototypeOf(str1);
+        var b = Object.getPrototypeOf(str2);
+        console.log(a===b);
+
+
+        function puch() {
+            data.push(Math.floor(Math.random()*10));
+            ha();
+        }
+
+        function pop() {
+            data.pop();
+            ha();
+        }
+
+        function ha() {
+            document.getElementById("ha").textContent = data;
+            document.getElementById("su").textContent = str.charAt(0);
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <button onclick="puch()">push</button>
+    <button onclick="pop()">pop</button>
+
+    <h2 id="ha"></h2>
+    <h2 id="su"></h2>
+    <h2 id="ke"></h2>
+
+</body>
+
+</html>
