@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+
+
+        //$が変数になっている
+        jQuery(function ($) {
+
+            $("#color_div").css("border", "1px solid green").css("background-color", "red").css("color", "pink");
+
+            $("<li>三郎</li>").appendTo("#family");
+            $("#taro").css("color", "red");
+
+            //$("h2,h3,h4").css("color", "blue");
+
+            $("#uni *").css("color", "red");
+
+            $("a[target='_blank']").css("color", "pink");
+
+            $(".green[target='_top']").css("color", "green");
+
+            //$("input[name*='cat']").css("color","orange");
+
+            $("span", "#aa").css("color", "red");
+
+            $("h2 + p").css("color","red");
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div id="color_div">ここの枠線をへんこうします</div>
+
+    <ul id="family">
+        <li class="man" id="taro">一郎</li>
+        <li class="man">次郎</li>
+    </ul>
+
+    <h2>岩井菫</h2>
+
+    <h3>岩井菫</h3>
+
+    <h4>岩井菫</h4>
+
+    <div id="uni">
+        <p>コラボスタイル</p>
+        <p>コラボスタイル</p>
+    </div>
+    <p>コラボスタイル</p>
+
+    <a href="" target="_blank">pink</a>
+    <a href="" target="_self">青</a>
+    <a href="" target="_parent">赤</a>
+    <a href="" target="_top" class="green">緑</a>
+
+    <input name="cat">
+    <input name="cat-2">
+    <input name="catman">
+    <input name="dog">
+
+    <ul>
+        <li><span>たろ</span></li>
+        <div id="aa">
+            <li id="jiro"><span>じろ</span></li>
+            <li><span>はなこ</span></li>
+        </div>
+    </ul>
+
+    <h2>宇宙について</h2>
+    <p>ひろいなあ</p>
+
+</body>
+
+</html>
+
+<!-- #jQueryの基本的な使い方
+
+$(XXX)か
+$.XXX()
+
+①セレクタとして使う
+'$("セレクター文字列")'
+HTML要素を選択して、その要素に対して操作する。
+例）  
+$("p a")
+$("#name") id="name"
+
+
+②関数として使う
+③DOM要素の生成で使う
+④セレクタ―的な役割で使う -->
