@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+    </style>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        jQuery(function () {
+
+            $("#sei").on("click", function (event) {
+
+                const data = $("#seri_form").serializeArray();
+                data.push({name:"mode",value:"update"});
+                alert(data);
+
+            })
+
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <form id="seri_form">
+
+        <input type="text" name="mytext">
+        <label for=""><input type="checkbox" name="mychk" value="strawberr">いちご</label>
+        <label for=""><input type="checkbox" name="mychk" value="orange">みかん</label>
+
+        <label for=""><input type="radio" name="myrdo" value="taro">太郎</label>
+        <label for=""><input type="radio" name="myrdo" value="jiro">次郎</label>
+
+        <input type="submit" value="表示" id="sei">
+    </form>
+
+</body>
+
+</html>
