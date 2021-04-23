@@ -17,15 +17,15 @@
     <script>
         jQuery(function () {
 
-            $("#sei").on("click", function (event) {
+            $("#btn_show").on("click", function () {
 
-                const data = $("#seri_form").serializeArray();
-                data.push({name:"mode",value:"update"});
-                alert(data);
+                $("#box1").css("background-color","pink");
+                $("#box1").animate({opacity:0.5},1000);
+                $("#box1").animate({width:"+=1000"},1000);
+                $("#box1").css("background-color","green");
 
-            })
-
-
+              
+            });
 
         });
     </script>
@@ -34,17 +34,15 @@
 
 <body>
 
-    <form id="seri_form">
+    <div id="box1" style="width: 100px; height: 100px; background-color: orange;"></div>
 
-        <input type="text" name="mytext">
-        <label for=""><input type="checkbox" name="mychk" value="strawberr">いちご</label>
-        <label for=""><input type="checkbox" name="mychk" value="orange">みかん</label>
+    <form action="">
+        <input type="button" id="btn_show" value="start">
+        <!-- <input type="button" id="btn_hide" value="out()"> -->
 
-        <label for=""><input type="radio" name="myrdo" value="taro">太郎</label>
-        <label for=""><input type="radio" name="myrdo" value="jiro">次郎</label>
-
-        <input type="submit" value="表示" id="sei">
     </form>
+
+    <h2>momoagegege</h2>
 
 </body>
 
